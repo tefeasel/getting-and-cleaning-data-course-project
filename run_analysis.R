@@ -38,6 +38,6 @@ all[,2] <- activity_labels[all[,2], 2]
 #Step 5 Data frame with Average of Each Variable for Each Subject
 all_tidy <- group_by(all, subject, activity) %>%
             summarise_each(funs(mean))
-write.table(all_tidy, "all_tidy.txt")
+write.table(all_tidy, "all_tidy.txt", row.names = FALSE)
             
 
